@@ -35,19 +35,7 @@ pipeline{
 
                 def NexusRepo = Version.endsWith("SNAPSHOT") ? "DevOpsLab-SNAPSHOT" : "DevOpsLab-RELEASE"
 
-                nexusArtifactUploader artifacts: 
-                [[artifactId: "${ArtifactId}", 
-                classifier: '', 
-                file: "target/${ArtifactId}-${Version}.war", 
-                type: 'war']], 
-                credentialsId: '35e9b26e-269a-4804-a70d-6b2ec7a608ce', 
-                groupId: "${GroupId}", 
-                nexusUrl: '172.20.10.140:8081', 
-                nexusVersion: 'nexus3', 
-                protocol: 'http', 
-                repository: "${NexusRepo}", 
-                version: "${Version}"
-             }
+                nexusArtifactUploader artifacts: [[artifactId: 'DevopsLab', classifier: '', file: 'target/maven-java.war', type: 'war']], credentialsId: 'bab75d51-1f66-4cca-ba58-9749781a0d38', groupId: 'com.devopslab', nexusUrl: '34.226.191.79', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-java', version: '0.0.14-SNAPSHOT'         }
             }
         }
 
