@@ -55,7 +55,7 @@ pipeline{
                 echo "Deploying ...."
                 sshPublisher(publishers: 
                 [sshPublisherDesc(
-                    configName: 'Ansible_Controller', 
+                    configName: 'docker_AMN', 
                     transfers: [
                         sshTransfer(
                                 cleanRemote:false,
@@ -77,7 +77,7 @@ pipeline{
                 echo "Deploying ...."
                 sshPublisher(publishers: 
                 [sshPublisherDesc(
-                    configName: 'Ansible_Controller', 
+                    configName: 'docker_AMN', 
                     transfers: [
                         sshTransfer(
                                 cleanRemote:false,
